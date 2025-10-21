@@ -1,0 +1,53 @@
+<style>
+  @layer utilities {
+    .glass {
+      background: rgba(255, 255, 255, 0.05);
+      backdrop-filter: blur(12px);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 1rem;
+    }
+
+    .neon-text {
+      color: #00f0ff;
+      text-shadow: 0 0 5px #00f0ff, 0 0 10px #00f0ff, 0 0 20px #00f0ff;
+    }
+
+    .neon-button {
+      background: linear-gradient(90deg, #00f0ff, #8a2be2);
+      color: white;
+      border: none;
+      padding: 0.75rem 1.5rem;
+      border-radius: 0.5rem;
+      box-shadow: 0 0 10px #00f0ff;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .neon-button:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 20px #00f0ff;
+    }
+
+    .gradient-border {
+      border: 2px solid transparent;
+      border-image: linear-gradient(45deg, #00f0ff, #8a2be2) 1;
+    }
+
+    ::selection {
+      background: #00f0ff;
+      color: black;
+    }
+
+    ::-webkit-scrollbar {
+      width: 8px;
+    }
+
+    ::-webkit-scrollbar-track {
+      background: #1a1a1a;
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background: #00f0ff;
+      border-radius: 4px;
+    }
+  }
+</style>

@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>
+    Damasus Culberth | Frontend Developer</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <style>
+    @layer utilities {
+      .glass {
+        background: rgba(255, 255, 255, 0.05);
+        backdrop-filter: blur(12px);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        border-radius: 1rem;
+      }
+
+      .neon-text {
+        color: #00f0ff;
+        text-shadow: 0 0 5px #00f0ff, 0 0 10px #00f0ff, 0 0 20px #00f0ff;
+      }
+
+      .neon-button {
+        background: linear-gradient(90deg, #00f0ff, #8a2be2);
+        color: white;
+        border: none;
+        padding: 0.75rem 1.5rem;
+        border-radius: 0.5rem;
+        box-shadow: 0 0 10px #00f0ff;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
+
+      .neon-button:hover {
+        transform: scale(1.05);
+        box-shadow: 0 0 20px #00f0ff;
+      }
+
+      .gradient-border {
+        border: 2px solid transparent;
+        border-image: linear-gradient(45deg, #00f0ff, #8a2be2) 1;
+      }
+
+      ::selection {
+        background: #00f0ff;
+        color: black;
+      }
+
+      ::-webkit-scrollbar {
+        width: 8px;
+      }
+
+      ::-webkit-scrollbar-track {
+        background: #1a1a1a;
+      }
+
+      ::-webkit-scrollbar-thumb {
+        background: #00f0ff;
+        border-radius: 4px;
+      }
+    }
+
+    /* Avatar utility: use --object-pos to fine-tune alignment (e.g. "50% 40%") */
+    .avatar {
+      display: inline-block;
+      overflow: hidden;
+      border-radius: 9999px;
+      --object-pos: center; /* default position */
+    }
+
+    .avatar img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: var(--object-pos);
+      display: block;
+    }
+  </style>
+</head>
+<body class="bg-black text-white font-sans">
+
+  <!-- Hero Section -->
+  <header class="bg-gradient-to-r from-gray-900 via-black to-gray-900 text-white p-6 sm:p-8 text-center">
+    <!-- Profile Image Centered -->
+    <div class="flex justify-center">
+      <div class="avatar w-20 h-20 sm:w-28 sm:h-28 md:w-32 md:h-32 border-4 border-blue-500 shadow-lg" style="--object-pos: center">
+        <img src="profile picture/profile pic.jpg" alt="Damasus Culberth" loading="lazy" onerror="this.onerror=null;this.src='assets/profile-placeholder.svg'" />
+      </div>
+    </div>
+
+    <!-- Name and Title -->
+    <div class="mt-4">
+      <h1 class="text-3xl sm:text-4xl md:text-5xl font-bold">Damasus Culberth</h1>
+      <p class="text-base sm:text-lg text-gray-300">Frontend Web Developer</p>
+    </div>
+
+
+    <!-- Bio Panel -->
+  <div class="mt-6 max-w-2xl mx-auto bg-gray-800 bg-opacity-50 backdrop-blur-md p-3 sm:p-4 rounded-lg border border-gray-700">
+      <p class="text-gray-200">
+        Passionate about crafting responsive, accessible, and beautiful web experiences using React.js and Tailwind CSS. Always exploring new frontiers in frontend development.
+      </p>
+    </div>
+    
+  </header>
+
+  <!-- Main Content (responsive two-column flex) -->
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
+    <div class="flex flex-col md:flex-row md:space-x-6">
+
+      <!-- Main column -->
+      <main class="md:w-2/3">
+  <!-- About Me -->
+  <section class="p-4 sm:p-6">
+          <h2 class="text-2xl font-semibold mb-4">About Me</h2>
+          <p>
+            I'm a frontend developer with a passion for clean code and intuitive design. With expertise in HTML, CSS, JavaScript, React.js, and Tailwind CSS, I build fast, responsive websites that delight users and meet business goals.
+          </p>
+        </section>
+
+        <!-- Projects -->
+  <section id="projects" class="p-4 sm:p-6">
+          <h2 class="text-2xl font-semibold mb-4">Projects</h2>
+
+          <div class="space-y-6">
+            <div class="bg-gray-800 p-3 sm:p-4 rounded shadow">
+              <h3 class="text-lg sm:text-xl font-bold">Portfolio Website</h3>
+              <p class="text-gray-200">Built with React and Tailwind CSS. Fully responsive, with smooth animations and dark mode toggle.</p>
+              <p class="mt-2">
+                <a href="#" class="text-blue-400 hover:underline px-2 py-1 rounded">Live Demo</a> |
+                <a href="#" class="text-blue-400 hover:underline px-2 py-1 rounded">GitHub</a>
+              </p>
+            </div>
+
+            <div class="bg-gray-800 p-3 sm:p-4 rounded shadow">
+              <h3 class="text-lg sm:text-xl font-bold">Github Profile</h3>
+              <p class="text-gray-200">https://github.com/Culberthrules</p>
+              <p class="mt-2">
+                <a href="https://github.com/Culberthrules?tab=repositories" class="text-blue-400 hover:underline px-2 py-1 rounded">My Repository</a> |
+                <a href="https://github.com/Culberthrules" class="text-blue-400 hover:underline px-2 py-1 rounded">GitHub</a>
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <!-- Experience -->
+        <section class="p-4 sm:p-6">
+          <h2 class="text-2xl font-semibold mb-4">Experience</h2>
+          <p><strong>Frontend Developer – Freelance (2024–2025)</strong><br />
+          Developed custom websites for small businesses using React and Tailwind. Improved performance and SEO across all projects.</p>
+        </section>
+
+        <!-- Education -->
+        <section class="p-4 sm:p-6">
+          <h2 class="text-2xl font-semibold mb-4">Education & Certifications</h2>
+          <ul class="list-disc list-inside">
+            <li>Front-End Developer Certificate – GoMyCode</li>
+            <li>Web Developer Certificate - Udemy</li>
+          </ul>
+        </section>
+      </main>
+
+  <!-- Sidebar -->
+  <aside class="md:w-1/3 space-y-6 mt-6 md:mt-0">
+        <!-- Skills -->
+        <section class="p-4 sm:p-6 bg-gray-800 bg-opacity-40 glass rounded-lg">
+          <h2 class="text-2xl font-semibold mb-4">Skills</h2>
+          <div class="grid grid-cols-2 gap-4">
+            <ul class="list-disc list-inside">
+              <li>HTML, CSS, JavaScript</li>
+              <li>React.js, Next.js</li>
+            </ul>
+            <ul class="list-disc list-inside">
+              <li>Tailwind CSS, Sass</li>
+              <li> Git & GitHub</li>
+              <li>VS Code, Chrome DevTools</li>
+            </ul>
+          </div>
+        </section>
+
+        <!-- Contact -->
+        <section class="p-4 sm:p-6 bg-gray-800 bg-opacity-40 glass rounded-lg">
+          <h2 class="text-2xl font-semibold mb-4">Contact</h2>
+          <p class="break-words">Email: <a href="mailto:culberthdamasus@gmail.com" class="text-blue-400 hover:underline">culberthdamasus@gmail.com</a></p>
+          <p class="break-words">GitHub: <a href="https://github.com/Culberthrules" class="text-blue-400 hover:underline">https://github.com/Culberthrules</a></p>
+          <p class="break-words">LinkedIn: <a href="https://www.linkedin.com/in/damasus-culberth-90a4541a9?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" class="text-blue-400 hover:underline">linkedin.com/in/damasus-culberth</a></p>
+          <p class="break-words">X: <a href="https://x.com/myogamisama?s=11" class="text-blue-400 hover:underline">https://x.com/myogamisama?s=11</a></p>
+        </section>
+      </aside>
+
+    </div>
+
+  <footer class="bg-gray-900 text-gray-400 text-center p-4 mt-6 shadow-inner">
+    <p>&copy; 2025 myogamisama. All rights reserved.</p>
+  </footer>
+<!-- Your enhanced JavaScript -->
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const body = document.body;
+    const toggle = document.getElementById("darkToggle");
+
+    const storedTheme = localStorage.getItem("theme");
+    if (storedTheme) applyTheme(storedTheme);
+
+    if (toggle) {
+      toggle.addEventListener("click", () => {
+        const current = body.classList.contains("bg-black") ? "dark" : "light";
+        const next = current === "dark" ? "light" : "dark";
+        applyTheme(next);
+        localStorage.setItem("theme", next);
+      });
+    }
+
+    function applyTheme(theme) {
+      if (theme === "light") {
+        body.classList.remove("bg-black", "text-white");
+        body.classList.add("bg-white", "text-gray-800");
+      } else {
+        body.classList.remove("bg-white", "text-gray-800");
+        body.classList.add("bg-black", "text-white");
+      }
+    }
+
+    document.querySelectorAll("#projects a").forEach(link => {
+      link.addEventListener("click", e => {
+        const href = link.getAttribute("href");
+        if (href === "#") {
+          e.preventDefault();
+          alert("This link is not yet active. Stay tuned!");
+        }
+      });
+    });
+
+    document.querySelectorAll("a[href^='#']").forEach(anchor => {
+      anchor.addEventListener("click", function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute("href"));
+        if (target) {
+          target.scrollIntoView({ behavior: "smooth" });
+        }
+      });
+    });
+
+    const revealElements = document.querySelectorAll("section, .glass");
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("transition", "duration-700", "opacity-100", "translate-y-0");
+        }
+      });
+    }, { threshold: 0.1 });
+
+    revealElements.forEach(el => {
+      el.classList.add("opacity-0", "-translate-y-4");
+      observer.observe(el);
+    });
+  });
+</script>
+<script src="script.js"></script>
+</body>
+</html>

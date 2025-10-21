@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Welcome — Damasus Culberth</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <style>
+    @layer utilities {
+      .glass {
+        background: rgba(255, 255, 255, 0.05);
+        backdrop-filter: blur(12px);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        border-radius: 1rem;
+      }
+
+      .neon-text {
+        color: #00f0ff;
+        text-shadow: 0 0 5px #00f0ff, 0 0 10px #00f0ff, 0 0 20px #00f0ff;
+      }
+
+      .neon-button {
+        background: linear-gradient(90deg, #00f0ff, #8a2be2);
+        color: white;
+        border: none;
+        padding: 0.75rem 1.5rem;
+        border-radius: 0.5rem;
+        box-shadow: 0 0 10px #00f0ff;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
+
+      .neon-button:hover {
+        transform: scale(1.05);
+        box-shadow: 0 0 20px #00f0ff;
+      }
+
+      .gradient-border {
+        border: 2px solid transparent;
+        border-image: linear-gradient(45deg, #00f0ff, #8a2be2) 1;
+      }
+
+      ::selection {
+        background: #00f0ff;
+        color: black;
+      }
+
+      ::-webkit-scrollbar {
+        width: 8px;
+      }
+
+      ::-webkit-scrollbar-track {
+        background: #1a1a1a;
+      }
+
+      ::-webkit-scrollbar-thumb {
+        background: #00f0ff;
+        border-radius: 4px;
+      }
+    }
+  </style>
+</head>
+<body class="bg-black text-white font-sans">
+
+  <main class="min-h-screen flex items-center justify-center px-4 sm:px-6">
+    <div class="max-w-4xl w-full bg-gradient-to-r from-gray-900 via-black to-gray-900 rounded-lg shadow-xl overflow-hidden">
+      <div class="flex flex-col md:flex-row">
+
+        <div class="md:w-1/2 p-8 glass flex flex-col justify-center">
+          <h1 class="text-3xl sm:text-4xl font-bold neon-text mb-4">Welcome, Reader</h1>
+          <p class="text-gray-300">Every great story begins with a single page. Yours starts here — explore my work, and let's build something memorable together.</p>
+        </div>
+
+        <div class="md:w-1/2 p-8 flex items-center justify-center">
+          <a href="Myportfolio.html" class="neon-button">Begin Your Journey</a>
+        </div>
+
+      </div>
+    </div>
+  </main>
+
+</body>
+</html>
+
+
+
